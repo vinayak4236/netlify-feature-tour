@@ -1,0 +1,37 @@
+# GitHub Hosting Instructions
+
+Follow these steps to host your Campus Connect Portal on GitHub:
+
+1. Create a new repository on GitHub:
+   - Go to https://github.com/ and sign in
+   - Click the "+" icon in the top-right corner and select "New repository"
+   - Name: campus-connect-portal
+   - Description: A comprehensive web portal for university students
+   - Choose Public or Private
+   - Do NOT initialize with README, .gitignore, or license
+   - Click "Create repository"
+
+2. Connect your local repository to GitHub (run these commands in your terminal):
+   ```
+   git remote add origin https://github.com/yourusername/campus-connect-portal.git
+   git branch -M main
+   git push -u origin main
+   ```
+   (Replace "yourusername" with your actual GitHub username)
+
+3. Enable GitHub Pages for hosting:
+   - Go to your repository on GitHub
+   - Click "Settings"
+   - Scroll down to "GitHub Pages" section
+   - Under "Source", select "main" branch
+   - Click "Save"
+   - Your site will be published at: https://yourusername.github.io/campus-connect-portal/
+
+4. For future updates, use these commands:
+   ```
+   git add .
+   git commit -m "Description of changes"
+   git push
+   ```
+
+Your Campus Connect Portal is now hosted on GitHub Pages and accessible worldwide!

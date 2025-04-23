@@ -1,47 +1,71 @@
-![Netlify examples](netlify-badge-examples.png)
+# Campus Connect Portal
 
-# Netlify Feature Tour
+A comprehensive web portal for university students to access campus resources, events, clubs, announcements, and academic information.
 
-**Access this demo site**: https://feature-tour.netlify.app
+## Features
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fad6792e-1c44-44db-bd79-ea74b42b0f89/deploy-status)](https://app.netlify.com/sites/feature-tour/deploys)
+- **Home Page**: Overview of campus activities and quick access to all features
+- **Events**: Browse and register for upcoming campus events
+- **Clubs**: Explore and join various student clubs and organizations
+- **Announcements**: Stay updated with the latest campus news and announcements
+- **Academics**: Access course listings, exam schedules, academic calendar, and placement opportunities
 
-## About this example site
+## Technologies Used
 
-This site provides a path to get started learning about Netlify features.
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
+- Font Awesome
 
-- 📚 [Docs Getting Started Tutorial](https://docs.netlify.com/get-started/?utm_medium=social&utm_source=github&utm_campaign=devex-ph&utm_content=devex-examples)
+## Pages
 
-## Speedily deploy your own version
+1. **Home Page** (index.html)
+   - Banner carousel
+   - Featured events
+   - Featured clubs
+   - Latest announcements
 
-Deploy your own version of this example site by selecting the Deploy to Netlify Button below. This will automatically:
+2. **Events Page** (events.html)
+   - Event listings with filters
+   - Event details
+   - Registration options
 
-- Clone a copy of this repo to your own GitHub account
-- Create a new project in your [Netlify account](https://app.netlify.com/?utm_medium=social&utm_source=github&utm_campaign=devex&utm_content=devex-examples), linked to your new repo
-- Create an automated deployment pipeline to watch for changes on your repo
-- Build and deploy your new site
+3. **Clubs Page** (clubs.html)
+   - Club categories
+   - Club listings
+   - Club details and joining options
 
-[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/netlify-feature-tour&utm_medium=social&utm_source=github&utm_campaign=devex&utm_content=devex-examples)
+4. **Announcements Page** (announcements.html)
+   - Latest announcements
+   - Important notices
+   - Campus news
 
-## Install and run this example locally
+5. **Academics Page** (academics.html)
+   - Course listings
+   - Exam scheduling & results
+   - Academic calendar
+   - Placement opportunities
 
-You can clone this example repo to explore its features and implementation and to run it locally.
+## Setup and Installation
 
-```shell
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/campus-connect-portal.git
+   ```
 
-# 1. Clone the repository to your local development environment
-git clone git@github.com:netlify/feature-tour.git
+2. Open the project in your preferred code editor
 
-# 2. Move into the project directory
-cd feature-tour
+3. Launch the website by opening `index.html` in a web browser
 
-# 3. Install code dependencies
-npm install
+## Contributing
 
-# 4. Install the Netlify CLI to let you locally serve your site using Netlify's features
-npm install -g netlify-cli
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-# 5. Serve your site using Netlify Dev
-netlify dev
+## License
 
-```
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+For any questions or suggestions, please contact us at info@campusconnect.edu

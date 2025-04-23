@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Campus Connect Portal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Decorative Elements -->
+    <div class="floating-decoration"></div>
+    <div class="floating-decoration"></div>
+    <div class="floating-decoration"></div>
+    <div class="floating-decoration"></div>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Campus Connect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clubs.html">Clubs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="announcements.html">Announcements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="academics.html">Academics</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="announcement-header">
+        <div class="container text-center">
+            <h1 class="display-4">Academic Resources</h1>
+            <p class="lead">Access course information, exam schedules, academic calendar, and placement opportunities.</p>
+        </div>
+    </header>
+
+    <!-- Academic Tabs Section -->
+    <section class="container my-5 content-section">
+        <ul class="nav nav-tabs" id="academicTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="courses-tab" data-bs-toggle="tab" data-bs-target="#courses" type="button" role="tab" aria-controls="courses" aria-selected="true">
+                    <i class="fas fa-book me-2"></i>Course Listings
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="exams-tab" data-bs-toggle="tab" data-bs-target="#exams" type="button" role="tab" aria-controls="exams" aria-selected="false">
+                    <i class="fas fa-clipboard-list me-2"></i>Exam Scheduling & Results
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar" type="button" role="tab" aria-controls="calendar" aria-selected="false">
+                    <i class="fas fa-calendar-alt me-2"></i>Academic Calendar
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="placements-tab" data-bs-toggle="tab" data-bs-target="#placements" type="button" role="tab" aria-controls="placements" aria-selected="false">
+                    <i class="fas fa-briefcase me-2"></i>Placements
+                </button>
+            </li>
+        </ul>
+        
+        <div class="tab-content p-4 border border-top-0 rounded-bottom" id="academicTabsContent">
+            <!-- Course Listings Tab -->
+            <div class="tab-pane fade show active" id="courses" role="tabpanel" aria-labelledby="courses-tab">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3>Course Listings</h3>
+                    <div>
+                        <select class="form-select form-select-sm" id="departmentFilter">
+                            <option value="all" selected>All Departments</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="eng">Engineering</option>
+                            <option value="bus">Business</option>
+                            <option value="arts">Arts & Humanities</option>
+                            <option value="sci">Sciences</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Course Code</th>
+                                <th>Course Title</th>
+                                <th>Department</th>
+                                <th>Credits</th>
+                                <th>Instructor</th>
+                                <th>Schedule</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-department="cs">
+                                <td>CS101</td>
+                                <td>Introduction to Computer Science</td>
+                                <td>Computer Science</td>
+                                <td>3</td>
+                                <td>Dr. Alan Turing</td>
+                                <td>Mon, Wed, Fri 10:00 AM - 11:00 AM</td>
+                                <td><button class="btn btn-sm btn-accent">View Details</button></td>
+                            </tr>
+                            <tr data-department="cs">
+                                <td>CS202</td>
+                                <td>Data Structures and Algorithms</td>
+                                <td>Computer Science</td>
+                                <td>4</td>
+                                <td>Dr. Ada Lovelace</td>
+                                <td>Tue, Thu 1:00 PM - 3:00 PM</td>
+                                <td><button class="btn btn-sm btn-accent">View Details</button></td>
+                            </tr>
+                            <tr data-department="eng">
+                                <td>ENG205</td>
+                                <td>Circuit Theory</td>
+                                <td>Engineering</td>
+                                <td>4</td>
+                                <td>Prof. Nikola Tesla</td>
+                                <td>Mon, Wed 2:00 PM - 4:00 PM</td>
+                                <td><button class="btn btn-sm btn-accent">View Details</button></td>
+                            </tr>
+                            <tr data-department="bus">
+                                <td>BUS101</td>
+                                <td>Principles of Management</td>
+                                <td>Business</td>
+                                <td>3</td>
+                                <td>Dr. Peter Drucker</td>
+                                <td>Tue, Thu 9:00 AM - 10:30 AM</td>
+                                <td><button class="btn btn-sm btn-accent">View Details</button></td>
+                            </tr>
+                            <tr data-department="arts">
+                                <td>ART110</td>
+                                <td>Introduction to Fine Arts</td>
+                                <td>Arts & Humanities</td>
+                                <td>3</td>
+                                <td>Prof. Frida Kahlo</td>
+                                <td>Wed, Fri 11:00 AM - 12:30 PM</td>
+                                <td><button class="btn btn-sm btn-accent">View Details</button></td>
+                            </tr>
+                            <tr data-department="sci">
+                                <td>PHY201</td>
+                                <td>Classical Mechanics</td>
+                                <td>Sciences</td>
+                                <td>4</td>
+                                <td>Dr. Isaac Newton</td>
+                                <td>Mon, Wed, Fri 1:00 PM - 2:00 PM</td>
+                                <td><button class="btn btn-sm btn-accent">View Details</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <nav aria-label="Course pagination">
+                    <ul class="pagination justify-content-center mt-4">
+                        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Exam Scheduling & Results Tab -->
+            <div class="tab-pane fade" id="exams" role="tabpanel" aria-labelledby="exams-tab">
+                <ul class="nav nav-pills mb-4" id="examSubTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="schedule-tab" data-bs-toggle="pill" data-bs-target="#schedule" type="button" role="tab" aria-controls="schedule" aria-selected="true">Exam Schedule</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="results-tab" data-bs-toggle="pill" data-bs-target="#results" type="button" role="tab" aria-controls="results" aria-selected="false">Exam Results</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content" id="examSubTabsContent">
+                    <!-- Exam Schedule Tab -->
+                    <div class="tab-pane fade show active" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i> Mid-term examinations will be held from May 15 to May 25, 2023.
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Course Code</th>
+                                        <th>Course Title</th>
+                                        <th>Venue</th>
+                                        <th>Instructions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>May 15, 2023</td>
+                                        <td>9:00 AM - 12:00 PM</td>
+                                        <td>CS101</td>
+                                        <td>Introduction to Computer Science</td>
+                                        <td>Hall A, Tech Building</td>
+                                        <td>Bring student ID and calculator</td>
+                                    </tr>
+                                    <tr>
+                                        <td>May 16, 2023</td>
+                                        <td>9:00 AM - 12:00 PM</td>
+                                        <td>BUS101</td>
+                                        <td>Principles of Management</td>
+                                        <td>Hall B, Business School</td>
+                                        <td>Bring student ID</td>
+                                    </tr>
+                                    <tr>
+                                        <td>May 17, 2023</td>
+                                        <td>2:00 PM - 5:00 PM</td>
+                                        <td>ENG205</td>
+                                        <td>Circuit Theory</td>
+                                        <td>Lab 3, Engineering Building</td>
+                                        <td>Bring student ID, calculator, and drawing instruments</td>
+                                    </tr>
+                                    <tr>
+                                        <td>May 18, 2023</td>
+                                        <td>9:00 AM - 12:00 PM</td>
+                                        <td>ART110</td>
+                                        <td>Introduction to Fine Arts</td>
+                                        <td>Hall C, Arts Building</td>
+                                        <td>Bring student ID</td>
+                                    </tr>
+                                    <tr>
+                                        <td>May 19, 2023</td>
+                                        <td>2:00 PM - 5:00 PM</td>
+                                        <td>PHY201</td>
+                                        <td>Classical Mechanics</td>
+                                        <td>Hall A, Science Building</td>
+                                        <td>Bring student ID, calculator, and formula sheet</td>
+                                    </tr>
+                                    <tr>
+                                        <td>May 22, 2023</td>
+                                        <td>9:00 AM - 12:00 PM</td>
+                                        <td>CS202</td>
+                                        <td>Data Structures and Algorithms</td>
+                                        <td>Hall B, Tech Building</td>
+                                        <td>Bring student ID</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-accent"><i class="fas fa-download me-2"></i>Download Exam Schedule</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Exam Results Tab -->
+                    <div class="tab-pane fade" id="results" role="tabpanel" aria-labelledby="results-tab">
+                        <div class="alert alert-warning">
+                            <i class="fas fa-exclamation-triangle me-2"></i> Results for the Fall 2022 semester have been published. Spring 2023 results will be available after June 30, 2023.
+                        </div>
+                        
+                        <div class="card mb-4">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0">Student Information</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="studentId" class="form-label">Student ID</label>
+                                            <input type="text" class="form-control" id="studentId" placeholder="Enter your student ID">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="semester" class="form-label">Semester</label>
+                                            <select class="form-select" id="semester">
+                                                <option selected>Fall 2022</option>
+                                                <option>Spring 2022</option>
+                                                <option>Fall 2021</option>
+                                                <option>Spring 2021</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-accent">View Results</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0">Sample Results (Demo Only)</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Course Code</th>
+                                                <th>Course Title</th>
+                                                <th>Credits</th>
+                                                <th>Grade</th>
+                                                <th>Grade Points</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>CS101</td>
+                                                <td>Introduction to Computer Science</td>
+                                                <td>3</td>
+                                                <td>A</td>
+                                                <td>12.0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ENG205</td>
+                                                <td>Circuit Theory</td>
+                                                <td>4</td>
+                                                <td>B+</td>
+                                                <td>14.0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>BUS101</td>
+                                                <td>Principles of Management</td>
+                                                <td>3</td>
+                                                <td>A-</td>
+                                                <td>11.1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PHY201</td>
+                                                <td>Classical Mechanics</td>
+                                                <td>4</td>
+                                                <td>B</td>
+                                                <td>12.0</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="text-end fw-bold">Semester GPA:</td>
+                                                <td>14</td>
+                                                <td colspan="2" class="fw-bold">3.51</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <a href="#" class="btn btn-accent"><i class="fas fa-download me-2"></i>Download Result PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Academic Calendar Tab -->
+            <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
+                <h3 class="mb-4">Academic Calendar 2023-2024</h3>
+                
+                <div class="accordion" id="calendarAccordion">
+                    <!-- Spring 2023 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="spring2023Heading">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#spring2023Collapse" aria-expanded="true" aria-controls="spring2023Collapse">
+                                Spring Semester 2023 (January - May)
+                            </button>
+                        </h2>
+                        <div id="spring2023Collapse" class="accordion-collapse collapse show" aria-labelledby="spring2023Heading" data-bs-parent="#calendarAccordion">
+                            <div class="accordion-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th width="30%">Event</th>
+                                                <th width="30%">Date</th>
+                                                <th width="40%">Notes</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Registration</td>
+                                                <td>January 2-6, 2023</td>
+                                                <td>Online registration through student portal</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Classes Begin</td>
+                                                <td>January 9, 2023</td>
+                                                <td>All departments</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Day to Add/Drop</td>
+                                                <td>January 20, 2023</td>
+                                                <td>Without academic penalty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mid-term Examinations</td>
+                                                <td>March 6-10, 2023</td>
+                                                <td>Regular classes suspended during this period</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Spring Break</td>
+                                                <td>March 13-17, 2023</td>
+                                                <td>No classes</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Day to Withdraw</td>
+                                                <td>April 7, 2023</td>
+                                                <td>With "W" grade</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Day of Classes</td>
+                                                <td>May 5, 2023</td>
+                                                <td>All departments</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Final Examinations</td>
+                                                <td>May 8-19, 2023</td>
+                                                <td>As per exam schedule</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Grades Due</td>
+                                                <td>May 26, 2023</td>
+                                                <td>From faculty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Commencement</td>
+                                                <td>May 30, 2023</td>
+                                                <td>Main Campus Stadium</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Fall 2023 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="fall2023Heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fall2023Collapse" aria-expanded="false" aria-controls="fall2023Collapse">
+                                Fall Semester 2023 (August - December)
+                            </button>
+                        </h2>
+                        <div id="fall2023Collapse" class="accordion-collapse collapse" aria-labelledby="fall2023Heading" data-bs-parent="#calendarAccordion">
+                            <div class="accordion-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th width="30%">Event</th>
+                                                <th width="30%">Date</th>
+                                                <th width="40%">Notes</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Registration</td>
+                                                <td>August 14-18, 2023</td>
+                                                <td>Online registration through student portal</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Classes Begin</td>
+                                                <td>August 21, 2023</td>
+                                                <td>All departments</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Day to Add/Drop</td>
+                                                <td>September 1, 2023</td>
+                                                <td>Without academic penalty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mid-term Examinations</td>
+                                                <td>October 9-13, 2023</td>
+                                                <td>Regular classes suspended during this period</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fall Break</td>
+                                                <td>October 16-17, 2023</td>
+                                                <td>No classes</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Day to Withdraw</td>
+                                                <td>November 3, 2023</td>
+                                                <td>With "W" grade</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thanksgiving Break</td>
+                                                <td>November 22-24, 2023</td>
+                                                <td>No classes</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Day of Classes</td>
+                                                <td>December 8, 2023</td>
+                                                <td>All departments</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Final Examinations</td>
+                                                <td>December 11-22, 2023</td>
+                                                <td>As per exam schedule</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Grades Due</td>
+                                                <td>December 29, 2023</td>
+                                                <td>From faculty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Spring 2024 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="spring2024Heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring2024Collapse" aria-expanded="false" aria-controls="spring2024Collapse">
+                                Spring Semester 2024 (January - May)
+                            </button>
+                        </h2>
+                        <div id="spring2024Collapse" class="accordion-collapse collapse" aria-labelledby="spring2024Heading" data-bs-parent="#calendarAccordion">
+                            <div class="accordion-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th width="30%">Event</th>
+                                                <th width="30%">Date</th>
+                                                <th width="40%">Notes</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Registration</td>
+                                                <td>January 8-12, 2024</td>
+                                                <td>Online registration through student portal</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Classes Begin</td>
+                                                <td>January 15, 2024</td>
+                                                <td>All departments</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Day to Add/Drop</td>
+                                                <td>January 26, 2024</td>
+                                                <td>Without academic penalty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mid-term Examinations</td>
+                                                <td>March 4-8, 2024</td>
+                                                <td>Regular classes suspended during this period</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Spring Break</td>
+                                                <td>March 11-15, 2024</td>
+                                                <td>No classes</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Day to Withdraw</td>
+                                                <td>April 5, 2024</td>
+                                                <td>With "W" grade</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Day of Classes</td>
+                                                <td>May 3, 2024</td>
+                                                <td>All departments</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Final Examinations</td>
+                                                <td>May 6-17, 2024</td>
+                                                <td>As per exam schedule</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Grades Due</td>
+                                                <td>May 24, 2024</td>
+                                                <td>From faculty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Commencement</td>
+                                                <td>May 28, 2024</td>
+                                                <td>Main Campus Stadium</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="#" class="btn btn-accent"><i class="fas fa-download me-2"></i>Download Full Calendar</a>
+                </div>
+            </div>
+            
+            <!-- Placements Tab -->
+            <div class="tab-pane fade" id="placements" role="tabpanel" aria-labelledby="placements-tab">
+                <div class="row mb-4">
+                    <div class="col-md-8">
+                        <h3>Campus Placements</h3>
+                        <p class="lead">Connect with top companies and kickstart your career through our placement services.</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <button type="button" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#placementRegistrationModal">
+                            <i class="fas fa-user-plus me-2"></i>Register for Placements
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Placement Registration Modal -->
+                <div class="modal fade" id="placementRegistrationModal" tabindex="-1" aria-labelledby="placementRegistrationModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary text-white">
+                                <h5 class="modal-title" id="placementRegistrationModalLabel">Placement Registration Form</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="placementRegistrationForm">
+                                    <div class="row g-3">
+                                        <!-- Personal Information -->
+                                        <div class="col-12">
+                                            <h6 class="border-bottom pb-2">Personal Information</h6>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="fullName" class="form-label">Full Name*</label>
+                                            <input type="text" class="form-control" id="fullName" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="studentId" class="form-label">Student ID*</label>
+                                            <input type="text" class="form-control" id="studentId" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">Email Address*</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="phone" class="form-label">Phone Number*</label>
+                                            <input type="tel" class="form-control" id="phone" required>
+                                        </div>
+                                        
+                                        <!-- Academic Information -->
+                                        <div class="col-12 mt-3">
+                                            <h6 class="border-bottom pb-2">Academic Information</h6>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="department" class="form-label">Department*</label>
+                                            <select class="form-select" id="department" required>
+                                                <option value="" selected disabled>Select Department</option>
+                                                <option value="Computer Science">Computer Science</option>
+                                                <option value="Engineering">Engineering</option>
+                                                <option value="Business">Business</option>
+                                                <option value="Arts & Humanities">Arts & Humanities</option>
+                                                <option value="Sciences">Sciences</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="program" class="form-label">Program*</label>
+                                            <select class="form-select" id="program" required>
+                                                <option value="" selected disabled>Select Program</option>
+                                                <option value="Bachelor's">Bachelor's</option>
+                                                <option value="Master's">Master's</option>
+                                                <option value="PhD">PhD</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="graduationYear" class="form-label">Expected Graduation Year*</label>
+                                            <select class="form-select" id="graduationYear" required>
+                                                <option value="" selected disabled>Select Year</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="cgpa" class="form-label">CGPA*</label>
+                                            <input type="number" class="form-control" id="cgpa" min="0" max="4.0" step="0.01" required>
+                                            <div class="form-text">Enter on a scale of 4.0</div>
+                                        </div>
+                                        
+                                        <!-- Skills & Preferences -->
+                                        <div class="col-12 mt-3">
+                                            <h6 class="border-bottom pb-2">Skills & Preferences</h6>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="skills" class="form-label">Key Skills*</label>
+                                            <textarea class="form-control" id="skills" rows="2" required placeholder="e.g., Programming languages, software, technical skills"></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="interests" class="form-label">Areas of Interest</label>
+                                            <textarea class="form-control" id="interests" rows="2" placeholder="e.g., Software Development, Data Science, Marketing"></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="form-label">Preferred Job Sectors</label>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="IT & Software" id="sectorIT">
+                                                        <label class="form-check-label" for="sectorIT">IT & Software</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Finance & Banking" id="sectorFinance">
+                                                        <label class="form-check-label" for="sectorFinance">Finance & Banking</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Consulting" id="sectorConsulting">
+                                                        <label class="form-check-label" for="sectorConsulting">Consulting</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Manufacturing" id="sectorManufacturing">
+                                                        <label class="form-check-label" for="sectorManufacturing">Manufacturing</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Healthcare" id="sectorHealthcare">
+                                                        <label class="form-check-label" for="sectorHealthcare">Healthcare</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Others" id="sectorOthers">
+                                                        <label class="form-check-label" for="sectorOthers">Others</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Resume Upload -->
+                                        <div class="col-12 mt-3">
+                                            <h6 class="border-bottom pb-2">Resume</h6>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="resume" class="form-label">Upload Resume*</label>
+                                            <input class="form-control" type="file" id="resume" accept=".pdf,.doc,.docx" required>
+                                            <div class="form-text">Upload your resume in PDF, DOC, or DOCX format (max 2MB)</div>
+                                        </div>
+                                        
+                                        <!-- Terms and Conditions -->
+                                        <div class="col-12 mt-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                                <label class="form-check-label" for="termsCheck">
+                                                    I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">terms and conditions</a> for placement registration
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-accent" id="submitPlacementRegistration">Submit Registration</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Terms and Conditions Modal -->
+                <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h6>Placement Registration Terms</h6>
+                                <p>By registering for campus placements, you agree to the following terms:</p>
+                                <ol>
+                                    <li>All information provided in the registration form must be accurate and truthful.</li>
+                                    <li>You must maintain a minimum CGPA of 2.5 to be eligible for placements.</li>
+                                    <li>Once registered for a placement drive, attendance is mandatory unless prior permission is obtained.</li>
+                                    <li>You must adhere to the dress code and professional conduct during placement activities.</li>
+                                    <li>The university reserves the right to cancel your placement registration in case of any disciplinary issues.</li>
+                                    <li>Your personal information may be shared with potential employers for placement purposes only.</li>
+                                    <li>You must not engage in any activity that may harm the university's relationship with recruiting companies.</li>
+                                </ol>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info mb-4">
+                    <i class="fas fa-info-circle me-2"></i> Placement season for 2023 graduates begins on June 1, 2023. Make sure your profile is updated in the placement portal.
+                </div>
+                
+                <!-- Upcoming Placement Drives -->
+                <div class="card mb-4">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Upcoming Placement Drives</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Company</th>
+                                        <th>Date</th>
+                                        <th>Eligible Departments</th>
+                                        <th>Position</th>
+                                        <th>Package (Annual)</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="company-logo me-2 bg-light rounded p-1">
+                                                    <i class="fab fa-google text-primary fa-2x"></i>
+                                                </div>
+                                                <span>Google</span>
+                                            </div>
+                                        </td>
+                                        <td>June 5, 2023</td>
+                                        <td>Computer Science, Engineering</td>
+                                        <td>Software Engineer</td>
+                                        <td>$120,000 - $150,000</td>
+                                        <td><button class="btn btn-sm btn-accent">Apply</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="company-logo me-2 bg-light rounded p-1">
+                                                    <i class="fab fa-microsoft text-info fa-2x"></i>
+                                                </div>
+                                                <span>Microsoft</span>
+                                            </div>
+                                        </td>
+                                        <td>June 10, 2023</td>
+                                        <td>Computer Science, Engineering, Business</td>
+                                        <td>Multiple Roles</td>
+                                        <td>$110,000 - $140,000</td>
+                                        <td><button class="btn btn-sm btn-accent">Apply</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="company-logo me-2 bg-light rounded p-1">
+                                                    <i class="fab fa-amazon text-warning fa-2x"></i>
+                                                </div>
+                                                <span>Amazon</span>
+                                            </div>
+                                        </td>
+                                        <td>June 15, 2023</td>
+                                        <td>Computer Science, Engineering, Business</td>
+                                        <td>Software Development Engineer</td>
+                                        <td>$115,000 - $145,000</td>
+                                        <td><button class="btn btn-sm btn-accent">Apply</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="company-logo me-2 bg-light rounded p-1">
+                                                    <i class="fab fa-apple text-dark fa-2x"></i>
+                                                </div>
+                                                <span>Apple</span>
+                                            </div>
+                                        </td>
+                                        <td>June 20, 2023</td>
+                                        <td>Computer Science, Engineering, Design</td>
+                                        <td>Product Engineer</td>
+                                        <td>$125,000 - $160,000</td>
+                                        <td><button class="btn btn-sm btn-accent">Apply</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="company-logo me-2 bg-light rounded p-1">
+                                                    <i class="fab fa-facebook text-primary fa-2x"></i>
+                                                </div>
+                                                <span>Meta</span>
+                                            </div>
+                                        </td>
+                                        <td>June 25, 2023</td>
+                                        <td>Computer Science, Engineering</td>
+                                        <td>Software Engineer</td>
+                                        <td>$130,000 - $155,000</td>
+                                        <td><button class="btn btn-sm btn-accent">Apply</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Placement Statistics -->
+                <div class="card mb-4">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Placement Statistics (2022)</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <div class="card text-center h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h1 class="display-4 text-primary">92%</h1>
+                                        <p class="card-text">Placement Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card text-center h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h1 class="display-4 text-success">150+</h1>
+                                        <p class="card-text">Companies Visited</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card text-center h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h1 class="display-4 text-info">$85K</h1>
+                                        <p class="card-text">Average Package</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card text-center h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h1 class="display-4 text-accent">$160K</h1>
+                                        <p class="card-text">Highest Package</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5>Top Recruiting Sectors</h5>
+                            <div class="progress mb-3" style="height: 25px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">IT & Software (35%)</div>
+                            </div>
+                            <div class="progress mb-3" style="height: 25px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Finance & Banking (25%)</div>
+                            </div>
+                            <div class="progress mb-3" style="height: 25px;">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Consulting (15%)</div>
+                            </div>
+                            <div class="progress mb-3" style="height: 25px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 12%;" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">Manufacturing (12%)</div>
+                            </div>
+                            <div class="progress mb-3" style="height: 25px;">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 8%;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">Healthcare (8%)</div>
+                            </div>
+                            <div class="progress" style="height: 25px;">
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">Others (5%)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Placement Resources -->
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Placement Resources</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-file-alt me-2"></i>Resume Building</h6>
+                                <p>Get help with creating a professional resume that stands out to employers.</p>
+                                <a href="#" class="btn btn-sm btn-outline-accent mb-3">Resume Templates</a>
+                                <a href="#" class="btn btn-sm btn-outline-accent mb-3">Resume Review Service</a>
+                                
+                                <h6><i class="fas fa-comments me-2"></i>Mock Interviews</h6>
+                                <p>Practice your interview skills with industry professionals and get valuable feedback.</p>
+                                <a href="#" class="btn btn-sm btn-outline-accent mb-3">Schedule Mock Interview</a>
+                            </div>
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-chalkboard-teacher me-2"></i>Workshops & Webinars</h6>
+                                <p>Attend workshops and webinars on various topics related to career development.</p>
+                                <a href="#" class="btn btn-sm btn-outline-accent mb-3">Upcoming Workshops</a>
+                                
+                                <h6><i class="fas fa-book me-2"></i>Career Guidance</h6>
+                                <p>Get personalized career guidance from our experienced counselors.</p>
+                                <a href="#" class="btn btn-sm btn-outline-accent mb-3">Book Counseling Session</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Campus Connect</h5>
+                    <p>Your one-stop portal for campus events, clubs, and announcements.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="events.html" class="text-white">Events</a></li>
+                        <li><a href="clubs.html" class="text-white">Clubs</a></li>
+                        <li><a href="announcements.html" class="text-white">Announcements</a></li>
+                        <li><a href="academics.html" class="text-white">Academics</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contact Us</h5>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 University Ave, Campus City</p>
+                        <p><i class="fas fa-envelope"></i> info@campusconnect.edu</p>
+                        <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    </address>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 Campus Connect Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <!-- Academic JS -->
+    <script src="js/academics.js"></script>
+    
+    <script>
+        // Initialize all tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        
+        // Fix for nested modals (terms modal inside registration modal)
+        document.getElementById('termsModal').addEventListener('hidden.bs.modal', function () {
+            document.body.classList.add('modal-open');
+        });
+    </script>
+</body>
+</html>
